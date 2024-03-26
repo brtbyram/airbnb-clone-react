@@ -5,6 +5,7 @@
 * {
     font-family: Circular, -apple-system, BlinkMacSystemFont, Roboto, Helvetica Neue, sans-serif;
     line-height: 1.43;
+    text-decoration: none;
     margin: 0;
     -webkit-font-smoothing: antialiased;
 }
