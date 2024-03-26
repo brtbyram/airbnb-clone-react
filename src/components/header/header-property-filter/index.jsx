@@ -24,8 +24,9 @@ function HeaderFilter() {
         }
     }
 
+
     return (
-        <div className='relative'>
+        <div className="relative">
             <HeaderFilterBar activeTab={activeTab} setActiveTab={setActiveTab} />
             {renderActiveTab()}
         </div>
