@@ -58,7 +58,7 @@ const accommodations = [
     startDate: "2024-10-01",
     endDate: "2024-10-05",
     numberOfReviews: 112,
-    pricePerNight: 200,
+    pricePerNight: 1000,
     imageURL: [
       "https://a0.muscache.com/im/pictures/miso/Hosting-924450654260663447/original/aaa89221-0bf0-4269-be48-8faf9c7c2765.jpeg?im_w=720",
       "https://a0.muscache.com/im/pictures/miso/Hosting-1016153/original/5e249106-66d9-4638-99aa-6b8fc38f3203.jpeg?im_w=720",
@@ -80,7 +80,7 @@ const accommodations = [
     startDate: "2024-09-01",
     endDate: "2024-09-06",
     numberOfReviews: 56,
-    pricePerNight: 500,
+    pricePerNight: 900,
     imageURL: [
       "https://a0.muscache.com/im/pictures/miso/Hosting-751335671048162395/original/c8325a19-4a12-472b-b302-58a08e2e44f4.jpeg?im_w=720",
       "https://a0.muscache.com/im/pictures/miso/Hosting-48748370/original/0ed36ed9-0014-4414-a163-103c8d5f52e8.jpeg?im_w=720",
@@ -102,7 +102,7 @@ const accommodations = [
     startDate: "2024-08-01",
     endDate: "2024-08-04",
     numberOfReviews: 92,
-    pricePerNight: 300,
+    pricePerNight: 800,
     imageURL: [
       "https://a0.muscache.com/im/pictures/92b3b553-f178-4563-8122-60aac435d9e9.jpg?im_w=720",
       "https://a0.muscache.com/im/pictures/23693583-215d-415c-9565-78982adc880c.jpg?im_w=720",
@@ -124,7 +124,7 @@ const accommodations = [
     startDate: "2024-07-01",
     endDate: "2024-07-05",
     numberOfReviews: 112,
-    pricePerNight: 200,
+    pricePerNight: 1600,
     imageURL: [
       "https://a0.muscache.com/im/pictures/miso/Hosting-777822668041430381/original/a4032a93-bed4-4384-a986-a643450a7c33.jpeg?im_w=720",
       "https://a0.muscache.com/im/pictures/e15ee353-0861-44ed-868a-56091755e513.jpg?im_w=720",
@@ -146,7 +146,7 @@ const accommodations = [
     startDate: "2024-06-21",
     endDate: "2024-06-26",
     numberOfReviews: 56,
-    pricePerNight: 500,
+    pricePerNight: 1200,
     imageURL: [
       "https://a0.muscache.com/im/pictures/miso/Hosting-824015985248619464/original/0ff9dcba-2a84-4fc0-a253-bcd1a83fb0d7.jpeg?im_w=720",
       "https://a0.muscache.com/im/pictures/airflow/Hosting-826026275336075487/original/d0d18911-77de-4fb8-92db-d7cf146fa635.jpg?im_w=720",
@@ -168,7 +168,7 @@ const accommodations = [
     startDate: "2024-05-06",
     endDate: "2024-05-09",
     numberOfReviews: 92,
-    pricePerNight: 300,
+    pricePerNight: 3600,
     imageURL: [
       "https://a0.muscache.com/im/pictures/miso/Hosting-973104767916951124/original/86164e73-9851-4543-b33c-10b20cb64461.jpeg?im_w=720",
       "https://a0.muscache.com/im/pictures/miso/Hosting-826025597172937112/original/f89218d6-b3f3-46f9-a545-d70988c0e1e7.jpeg?im_w=720",
@@ -190,7 +190,7 @@ const accommodations = [
     startDate: "2024-07-13",
     endDate: "2024-07-20",
     numberOfReviews: 112,
-    pricePerNight: 200,
+    pricePerNight: 1100,
     imageURL: [
       "https://a0.muscache.com/im/pictures/miso/Hosting-761523451389798139/original/58bcc187-38db-4b32-afa4-838e332d9cdc.jpeg?im_w=720",
       "https://a0.muscache.com/im/pictures/miso/Hosting-920306508306217362/original/bc9a128c-4437-4347-b834-ff50840c9ab7.jpeg?im_w=720",
@@ -212,7 +212,7 @@ const accommodations = [
     startDate: "2024-10-12",
     endDate: "2024-10-14",
     numberOfReviews: 34,
-    pricePerNight: 200,
+    pricePerNight: 2300,
     imageURL: [
       "https://a0.muscache.com/im/pictures/miso/Hosting-924450654260663447/original/9512e845-de53-47e6-830d-6a8eb7a287d2.jpeg?im_w=720",
       "https://a0.muscache.com/im/pictures/miso/Hosting-737675795033659101/original/35b52590-7684-46a7-a620-07206dce0081.jpeg?im_w=720",

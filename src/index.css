@@ -9,3 +9,34 @@
     margin: 0;
     -webkit-font-smoothing: antialiased;
 }
+
+
+#rangeSlider .range-slider .w-full {
+    height: 1px;
+    width: 100%;
+}
+
+
+#rangeSlider .range-slider__thumb {
+    background-color: #fff;
+    border: 1px solid #b9b8b8;
+    border-radius: 50%;
+    cursor: pointer;
+    height: 32px;
+    width: 32px;
+}
+
+#rangeSlider .range-slider__track {
+    background-color: #000;
+    height: 2px;
+}
+
+#rangeSlider .range-slider__track--active {
+    background-color: #000 !important;
+}
+
+
+#rangeSlider .range-slider__range {
+    background-color: #000;
+    height: 1px;
+}

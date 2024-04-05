@@ -1,5 +1,7 @@
 import { Tab } from '@headlessui/react'
 import clsx from 'clsx'
+import { useContext } from 'react'
+import { Context } from '../../context/ModalContext'
 
 
 const languages = [
@@ -97,10 +99,12 @@ const currency = [
 
 function NationalSettings() {
 
+    const { setActiveModal } = useContext(Context)
+
     return (
-        <div className='absolute top-0 h-screen w-screen bg-[#000000]/50'>
+        <div className='fixed top-0 left-0 right-0 z-50 h-full w-full bg-[#000000]/50'>
             <div className='bg-white border rounded-2xl m-10 pl-6 pr-0 w-[1032px] mx-auto overflow-hidden'>
-                <button className='my-3 text-xl mb-3'>x</button>
+                <button onClick={() => setActiveModal("")} className='my-3 text-xl mb-3'>x</button>
                 <div className='overflow-y-auto h-[830px]'>
                     <Tab.Group >
                         <Tab.List className="border-b flex gap-x-1 outline-none mr-10 my-3 text-[#717171] text-sm font-semibold">

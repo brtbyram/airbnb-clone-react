@@ -3,14 +3,15 @@ import HeaderFilterBar from './HeaderFilterBar'
 import LocationFilter from './LocationFilter'
 import DateFilter from './DateFilter'
 import PeoplesFilter from './PeoplesFilter'
-
+import { useContext } from 'react'
+import { Context } from '../../../context/ModalContext'
 
 function HeaderFilter() {
 
-    const [activeTab, setActiveTab] = useState(null)
+    const { activeModal } = useContext(Context)
 
     const renderActiveTab = () => {
-        switch (activeTab) {
+        switch (activeModal) {
             case 'locationType':
                 return <LocationFilter />
             case 'startDateType':
@@ -27,7 +28,7 @@ function HeaderFilter() {
 
     return (
         <div className="relative">
-            <HeaderFilterBar activeTab={activeTab} setActiveTab={setActiveTab} />
+            <HeaderFilterBar  />
             {renderActiveTab()}
         </div>
     )

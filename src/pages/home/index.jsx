@@ -2,7 +2,6 @@ import accommodations from "../../data/accommodations"
 import AccommodationCard from "../../components/cards/AccommodationCard"
 import { useMediaQuery } from 'react-responsive'
 import clsx from "clsx"
-import CategoryModal from "../../components/modals/CategoryModal"
 
 function Home() {
 
@@ -27,7 +26,6 @@ function Home() {
           <AccommodationCard key={index} accommodation={accommodation} />
         ))}
       </div>
-      <CategoryModal/>
     </div>
   )
 }
