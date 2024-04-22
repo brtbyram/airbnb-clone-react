@@ -1,4 +1,3 @@
-import { useState } from 'react'
 import HeaderFilterBar from './HeaderFilterBar'
 import LocationFilter from './LocationFilter'
 import DateFilter from './DateFilter'

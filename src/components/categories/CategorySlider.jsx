@@ -13,15 +13,15 @@ function CategorySlider() {
     const [activeCategory, setActiveCategory] = useState('')
 
     return (
-        <div className='shrink w-full overflow-hidden'>
+        <div className='overflow-hidden'>
             <Swiper
                 modules={[Navigation, Pagination, Scrollbar, A11y]}
                 spaceBetween={0}
-                slidesPerView={10}
+                slidesPerView={7}
                 navigation
                 onSlideChange={() => console.log('slide change')}
                 onSwiper={(swiper) => console.log(swiper)}
-                className=''
+                className='w-full category-slider'
             >
                 {categoriesData.map((category, index) => (
                     <SwiperSlide onClick={() => setActiveCategory(category.name)} key={index} className={clsx("text-black opacity-80 grid place-content-center place-items-center gap-y-2 h-[74px] hover:border-b-2 cursor-pointer max-w-max mx-6", {
