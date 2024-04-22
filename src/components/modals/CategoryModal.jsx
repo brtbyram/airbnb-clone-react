@@ -5,52 +5,11 @@ import RangeSlider from 'react-range-slider-input';
 import 'react-range-slider-input/dist/style.css';
 import accommodations from "../../data/accommodations";
 import { VictoryBar } from 'victory';
-import { Link } from "react-router-dom";
 import { useContext } from "react";
 import { Context } from "../../context/ModalContext";
-
-const Button = ({ children, onClick, active, name }) => (
-    <button
-        onClick={onClick}
-        className={clsx(" border  text-sm hover:border-black transition-all", {
-            "rounded-[30px] py-2.5 px-6": name === "roomsAndBeds",
-            "rounded-xl !p-4 flex justify-start items-center": name === "locationType",
-            "flex flex-col space-y-1 items-start text-start py-5 px-6 border border-[#dddddd] rounded-[12px] transition-colors hover:border-black": name === "topRated",
-            "bg-[#f7f7f7] border-2 border-black": name === "locationType" && active || name === "topRated" && active,
-            "text-white bg-gradient-to-b from-neutral-800 from-33% via-zinc-800 via-66% to-neutral-800 to-90% border border-black": name === "roomsAndBeds" && active
-
-        })}
-    >
-        <span>{children}</span>
-    </button>
-)
-
-const CheckboxButton = ({ onClick, active }) => (
-    <button
-        onClick={onClick}
-        className={clsx("text-white border border-[#dddddd] rounded-md p-1 transition-all hover:border-black", {
-            "bg-[#f7f7f7] border-black": active,
-            "bg-gradient-to-b from-neutral-800 from-33% via-zinc-800 via-66% to-neutral-800 to-90% border border-black": active
-        })}
-    >
-        <Icon name='check' size={16} />
-    </button>
-)
-
-const RadioButton = ({ onClick, active }) => (
-    <div className={clsx("bg-[#b0b0b0] w-12 h-8 rounded-[32px] relative cursor-pointer transition-all hover:bg-[#000000] group", {
-        "bg-[#000000]": active
-    })}>
-        <button
-            onClick={onClick}
-            className={clsx("w-8 h-8 flex items-center justify-center bg-white border-2 border-[#b0b0b0] left-0 rounded-full absolute transition-all group-hover:border-[#000000] ", {
-                "text-black !border-black left-4": active,
-            })}
-        >
-            {active && <Icon name='check' size={16} />}
-        </button>
-    </div>
-)
+import  RadioButton  from "../buttons/RadioButton";
+import CheckboxButton  from "../buttons/CheckboxButton";
+import  Button  from "../buttons/Button";
 
 function CategoryModal() {
 
@@ -317,6 +276,7 @@ function CategoryModal() {
                                     <p className="text-[#717171] pt-1">Ev sahibinden onay beklemeden rezervasyon yapabileceğiniz kayıtlar</p>
                                 </div>
                                 <RadioButton
+                                    name="categoryModal"
                                     onClick={() => setFilters({ ...filters, bookingOptions: filters.bookingOptions.includes("Anında Rezervasyon") ? filters.bookingOptions.filter(item => item !== "Anında Rezervasyon") : [...filters.bookingOptions, "Anında Rezervasyon"] })}
                                     active={filters.bookingOptions.includes("Anında Rezervasyon")}
                                 />
@@ -327,6 +287,7 @@ function CategoryModal() {
                                     <p className="text-[#717171] pt-1">Varışta mekâna kolay erişim</p>
                                 </div>
                                 <RadioButton
+                                    name="categoryModal"
                                     onClick={() => setFilters({ ...filters, bookingOptions: filters.bookingOptions.includes("Kendi kendine giriş") ? filters.bookingOptions.filter(item => item !== "Kendi kendine giriş") : [...filters.bookingOptions, "Kendi kendine giriş"] })}
                                     active={filters.bookingOptions.includes("Kendi kendine giriş")} />
                             </div>
@@ -336,6 +297,7 @@ function CategoryModal() {
                                     <button className="text-[#717171] pt-1 outline*-">Yanınızda hizmet hayvanı mı getiriyorsunuz? </button>
                                 </div>
                                 <RadioButton
+                                    name="categoryModal"
                                     onClick={() => setFilters({ ...filters, bookingOptions: filters.bookingOptions.includes("Evcil hayvanlara izin veriliyor") ? filters.bookingOptions.filter(item => item !== "Evcil hayvanlara izin veriliyor") : [...filters.bookingOptions, "Evcil hayvanlara izin veriliyor"] })}
                                     active={filters.bookingOptions.includes("Evcil hayvanlara izin veriliyor")} />
                             </div>

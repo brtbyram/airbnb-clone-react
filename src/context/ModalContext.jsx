@@ -7,9 +7,10 @@ export const Context = createContext();
 export default function ModalContext ({ children }){
 
   const [activeModal, setActiveModal] = useState("");
+  const [ totalPrice, setTotalPrice] = useState(true)
 
   return (
-    <Context.Provider value={{ activeModal, setActiveModal }}>
+    <Context.Provider value={{ activeModal, setActiveModal, totalPrice, setTotalPrice }}>
       {children}
     </Context.Provider>
   )

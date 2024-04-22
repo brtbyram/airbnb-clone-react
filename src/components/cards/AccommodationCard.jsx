@@ -1,8 +1,13 @@
+import { useContext } from 'react';
+import { Context } from '../../context/ModalContext';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import 'swiper/swiper-bundle.css';
 import PropTypes from 'prop-types';
 
 function AccommodationCard({ accommodation }) {
+
+    const { totalPrice } = useContext(Context);
+
     return (
         <div className=" text-[#717171]">
             <Swiper
@@ -19,8 +24,16 @@ function AccommodationCard({ accommodation }) {
             <div className='flex text-[15px] items-start my-3'>
                 <div className='flex flex-col flex-1 space-y-1'>
                     <h2 className='font-semibold'>{accommodation.title}</h2>
-                    <p><span>{accommodation.nightToStay} gece</span> <span>{accommodation.startDate}- {accommodation.endDate}</span></p>
-                    <p className='pt-1.5 underline'><span className='font-bold'>{accommodation.pricePerNight * accommodation.nightToStay} ₺</span> vergi hariç toplam </p>
+                    {totalPrice ? (
+                        <>
+                            <p><span>{accommodation.nightToStay} gece</span> <span>{accommodation.startDate}- {accommodation.endDate}</span></p>
+                            <p className='pt-1.5 underline'><span className='font-bold'>{accommodation.pricePerNight * accommodation.nightToStay} ₺</span> vergi hariç toplam </p>
+                        </>) : (
+                        <>
+                            <p><span>{accommodation.nightToStay} gece</span> <span>{accommodation.startDate}- {accommodation.endDate}</span></p>
+                            <p className='pt-1.5'><span className='font-bold'>{accommodation.pricePerNight} ₺</span> gece</p>
+                        </>
+                    )}
                 </div>
                 <div>
                     <p className='leading-5 text-[#222222]'>{accommodation.rating}</p>
