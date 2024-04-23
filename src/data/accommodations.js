@@ -2,7 +2,8 @@ const accommodations = [
   {
     id: 1,
     title: "Güzel Deniz Manzaralı Villa",
-    location: "Bodrum, Muğla, Türkiye",
+    description: "Bodrum'un en güzel koylarından birinde yer alan bu villamızda huzurlu bir tatil sizi bekliyor. Villamızda 3 yatak odası, 2 banyo, özel havuz ve ücretsiz otopark bulunmaktadır.",
+    location: "Bodrum, Türkiye",
     type: "Villa",
     guests: 6,
     bedrooms: 3,
@@ -24,6 +25,7 @@ const accommodations = [
   {
     id: 2,
     title: "Şehir Merkezinde Lüks Daire",
+    description: "İstanbul'un en işlek caddelerinden birinde yer alan bu dairemizde konforlu bir konaklama sizi bekliyor. Dairemizde 2 yatak odası, 1 banyo, ücretsiz kahvaltı ve güvenlik kamerası bulunmaktadır.",
     location: "İstanbul, Türkiye",
     type: "Daire",
     guests: 4,
@@ -46,7 +48,8 @@ const accommodations = [
   {
     id: 3,
     title: "Doğa İçinde Taş Ev",
-    location: "Cappadocia, Nevşehir, Türkiye",
+    description: "Cappadocia'nın eşsiz atmosferinde yer alan bu taş evimizde huzurlu bir tatil sizi bekliyor. Evimizde 2 yatak odası, 1 banyo, ücretsiz kahvaltı ve klima bulunmaktadır.",
+    location: "Cappadocia, Türkiye",
     type: "Ev",
     guests: 4,
     bedrooms: 2,
@@ -68,7 +71,8 @@ const accommodations = [
   {
     id: 4,
     title: "Güzel Deniz Manzaralı Villa",
-    location: "Bodrum, Muğla, Türkiye",
+    description:"Bodrum'un en güzel koylarından birinde yer alan bu villamızda huzurlu bir tatil sizi bekliyor. Villamızda 3 yatak odası, 2 banyo, özel havuz ve ücretsiz otopark bulunmaktadır.",
+    location: "Bodrum, Türkiye",
     type: "Villa",
     guests: 6,
     bedrooms: 3,
@@ -90,6 +94,7 @@ const accommodations = [
   {
     id: 5,
     title: "Şehir Merkezinde Lüks Daire",
+    description:"İstanbul'un en işlek caddelerinden birinde yer alan bu dairemizde konforlu bir konaklama sizi bekliyor. Dairemizde 2 yatak odası, 1 banyo, ücretsiz kahvaltı ve güvenlik kamerası bulunmaktadır.",
     location: "İstanbul, Türkiye",
     type: "Daire",
     guests: 4,
@@ -112,7 +117,8 @@ const accommodations = [
   {
     id: 6,
     title: "Doğa İçinde Taş Ev",
-    location: "Cappadocia, Nevşehir, Türkiye",
+    description:"Cappadocia'nın eşsiz atmosferinde yer alan bu taş evimizde huzurlu bir tatil sizi bekliyor. Evimizde 2 yatak odası, 1 banyo, ücretsiz kahvaltı ve klima bulunmaktadır.",
+    location: "Cappadocia, Türkiye",
     type: "Ev",
     guests: 4,
     bedrooms: 2,
@@ -134,7 +140,8 @@ const accommodations = [
   {
     id: 7,
     title: "Güzel Deniz Manzaralı Villa",
-    location: "Bodrum, Muğla, Türkiye",
+    description:"Bodrum'un en güzel koylarından birinde yer alan bu villamızda huzurlu bir tatil sizi bekliyor. Villamızda 3 yatak odası, 2 banyo, özel havuz ve ücretsiz otopark bulunmaktadır.",
+    location: "Bodrum, Türkiye",
     type: "Villa",
     guests: 6,
     bedrooms: 3,
@@ -156,6 +163,7 @@ const accommodations = [
   {
     id: 8,
     title: "Şehir Merkezinde Lüks Daire",
+    description:"İstanbul'un en işlek caddelerinden birinde yer alan bu dairemizde konforlu bir konaklama sizi bekliyor. Dairemizde 2 yatak odası, 1 banyo, ücretsiz kahvaltı ve güvenlik kamerası bulunmaktadır.",
     location: "İstanbul, Türkiye",
     type: "Daire",
     guests: 4,
@@ -178,7 +186,8 @@ const accommodations = [
   {
     id: 9,
     title: "Doğa İçinde Taş Ev",
-    location: "Cappadocia, Nevşehir, Türkiye",
+    description:"Cappadocia'nın eşsiz atmosferinde yer alan bu taş evimizde huzurlu bir tatil sizi bekliyor. Evimizde 2 yatak odası, 1 banyo, ücretsiz kahvaltı ve klima bulunmaktadır.",
+    location: "Cappadocia, Türkiye",
     type: "Ev",
     guests: 4,
     bedrooms: 2,
@@ -200,6 +209,7 @@ const accommodations = [
   {
     id: 10,
     title: "Modern Daire Teras Manzaralı",
+    description:"İzmir'in en güzel semtlerinden birinde yer alan bu dairemizde konforlu bir konaklama sizi bekliyor. Dairemizde 1 yatak odası, 1 banyo, teras ve ücretsiz kahvaltı bulunmaktadır.",
     location: "İzmir, Türkiye",
     type: "Daire",
     guests: 2,
@@ -222,7 +232,8 @@ const accommodations = [
   {
     id: 11,
     title: "Doğa İçinde Taş Ev",
-    location: "Datça, Muğla, Türkiye",
+    description:"Datça'nın eşsiz atmosferinde yer alan bu taş evimizde huzurlu bir tatil sizi bekliyor. Evimizde 4 yatak odası, 3 banyo, bahçe ve ücretsiz otopark bulunmaktadır.",
+    location: "Datça, Türkiye",
     type: "Köy Evi",
     guests: 8,
     bedrooms: 4,
@@ -244,7 +255,8 @@ const accommodations = [
   {
     id: 12,
     title: "Denize Sıfır Plaj Ev",
-    location: "Çeşme, İzmir, Türkiye",
+    description:"Çeşme'nin en güzel plajlarından birinde yer alan bu evimizde huzurlu bir tatil sizi bekliyor. Evimizde 5 yatak odası, 4 banyo, özel havuz ve ücretsiz otopark bulunmaktadır.",
+    location: "Çeşme, Türkiye",
     type: "Evin Tümü",
     guests: 10,
     bedrooms: 5,
@@ -266,7 +278,8 @@ const accommodations = [
   {
     id: 13,
     title: "Dağ Evi Panoramik Manzaralı",
-    location: "Kaçkarlar, Rize, Türkiye",
+    description:"Kaçkarlar'ın eşsiz atmosferinde yer alan bu dağ evimizde huzurlu bir tatil sizi bekliyor. Evimizde 3 yatak odası, 2 banyo, kapalı şömine ve ücretsiz otopark bulunmaktadır.",
+    location: "Kaçkarlar, Türkiye",
     type: "Köy Evi",
     guests: 6,
     bedrooms: 3,
@@ -288,6 +301,7 @@ const accommodations = [
   {
     id: 14,
     title: "Ormanlık Alan Üzerinde Ağaç Evi",
+    description:"Yemyeşil ormanlık alan üzerinde yer alan bu ağaç evimizde huzurlu bir tatil sizi bekliyor. Evimizde 1 yatak odası, 1 banyo, özel bahçe ve ücretsiz kahvaltı bulunmaktadır.",
     location: "Yalova, Türkiye",
     type: "Ağaç Evi",
     guests: 4,
@@ -310,7 +324,8 @@ const accommodations = [
   {
     id: 15,
     title: "Deniz Kıyısında Taş Ev",
-    location: "Bozcaada, Çanakkale, Türkiye",
+    description:"Bozcaada'nın eşsiz atmosferinde yer alan bu taş evimizde huzurlu bir tatil sizi bekliyor. Evimizde 2 yatak odası, 1 banyo, balkon ve ücretsiz otopark bulunmaktadır.",
+    location: "Bozcaada, Türkiye",
     type: "Köy Evi",
     guests: 5,
     bedrooms: 2,
@@ -332,7 +347,8 @@ const accommodations = [
   {
     id: 16,
     title: "Eco-Friendly Ahşap Kulübeler",
-    location: "Çamlıhemşin, Rize, Türkiye",
+    description:"Karadeniz'in eşsiz atmosferinde yer alan bu ahşap kulübelerde huzurlu bir tatil sizi bekliyor. Kulübelerde 2 yatak odası, 1 banyo, organik bahçe ve ücretsiz otopark bulunmaktadır.",  
+    location: "Çamlıhemşin, Türkiye",
     type: "Köy Evi",
     guests: 4,
     bedrooms: 2,
@@ -354,7 +370,8 @@ const accommodations = [
   {
     id: 17,
     title: "Sakin ve Huzurlu Dağ Evi",
-    location: "Göynük, Bolu, Türkiye",
+    description:"Bolu'nun eşsiz atmosferinde yer alan bu dağ evimizde huzurlu bir tatil sizi bekliyor. Evimizde 4 yatak odası, 2 banyo, orman manzarası ve ücretsiz otopark bulunmaktadır.",
+    location: "Göynük, Türkiye",
     type: "Dağ Evi",
     guests: 8,
     bedrooms: 4,
@@ -376,7 +393,8 @@ const accommodations = [
   {
     id: 18,
     title: "Kıyıda Yel Değirmeni",
-    location: "Alaçatı, İzmir, Türkiye",
+    description:"Alaçatı'nın eşsiz atmosferinde yer alan bu yel değirmeninde huzurlu bir tatil sizi bekliyor. Yel değirmeninde 1 yatak oda ve 1 banyo bulunmaktadır.",
+    location: "Alaçatı, Türkiye",
     type: "Özel Oda",
     guests: 2,
     bedrooms: 1,
