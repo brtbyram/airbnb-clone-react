@@ -17,6 +17,19 @@ const SearchIcon = ({ size }) => {
   );
 };
 
+const MenuIcon = ({ size }) => {
+  const style = {
+    display: 'block',
+    fill: 'none',
+    stroke: 'currentcolor',
+    strokeWidth: '3',
+    overflow: 'visible',
+  };
+
+  return (
+    <svg width={size} height={size} xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" aria-hidden="true" role="presentation" focusable="false" style={style}><g fill="none"><path d="M2 16h28M2 24h28M2 8h28"></path></g></svg>
+  )
+}
 
 const LogoIcon = ({ size }) => {
   <svg xmlns="http://www.w3.org/2000/svg" width={size} height={size} version="1.1" id="Layer_1" x="0px" y="0px" viewBox="0 0 320.1 99.9" enableBackground="new 0 0 320.1 99.9" xmlSpace="preserve">
@@ -118,6 +131,7 @@ const CheckIcon = ({ size }) => {
 const Icon = ({ name, size = 24 }) => {
   const icons = {
     search: SearchIcon,
+    menu: MenuIcon,
     logo: LogoIcon,
     filter: FilterIcon,
     close: CloseIcon,
@@ -142,6 +156,10 @@ Icon.propTypes = {
 };
 
 SearchIcon.propTypes = {
+  size: PropTypes.number,
+};
+
+MenuIcon.propTypes = {
   size: PropTypes.number,
 };
 

@@ -13,16 +13,17 @@ function NavbarRight() {
         <nav>
             <ul className="flex items-center text-[#222222] pl-6">
                 <li>
-                    <a href="/" className="px-4 py-2.5 font-semibold text-[0.875rem] leading-[1.125rem] hover:bg-[#ebebeb] rounded-full">Evinizi Airbnb ye taşıyın</a>
+                    <a href="/" className="p-4 text-[0.875rem] leading-[1.125rem] hover:bg-[#f7f7f7] rounded-full">Evinizi Airbnb ye taşıyın</a>
                 </li>
-                <li className="px-4 py-2.5 hover:bg-[#ebebeb] rounded-full">
-                    <button onClick={() => setActiveModal("nationalSettings")} className="flex items-center">
+                <li className="mr-1.5 hover:bg-[#f7f7f7] rounded-full">
+                    <button onClick={() => setActiveModal("nationalSettings")} className="flex items-center p-4">
                         <Icon name="sphere" size={16} />
                     </button>
                 </li>
                 <li className="p-2 pl-3 text-gray-500 border rounded-full relative hover:shadow-md">
                     <Menu>
-                        <Menu.Button className="flex items-center justify-center">
+                        <Menu.Button className="flex items-center justify-center space-x-3.5">
+                            <Icon name="menu" size={16} />
                             <svg xmlns="http://www.w3.org/2000/svg" height={32} width={32} fill="currentColor" viewBox="0 0 32 32" aria-hidden="true" role="presentation" focusable="false">
                                 <path d="M16 .7C7.56.7.7 7.56.7 16S7.56 31.3 16 31.3 31.3 24.44 31.3 16 24.44.7 16 .7zm0 28c-4.02 0-7.6-1.88-9.93-4.81a12.43 12.43 0 0 1 6.45-4.4A6.5 6.5 0 0 1 9.5 14a6.5 6.5 0 0 1 13 0 6.51 6.51 0 0 1-3.02 5.5 12.42 12.42 0 0 1 6.45 4.4A12.67 12.67 0 0 1 16 28.7z">
                                 </path>

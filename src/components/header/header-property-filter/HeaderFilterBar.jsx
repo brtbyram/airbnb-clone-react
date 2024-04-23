@@ -22,14 +22,16 @@ function HeaderFilterBar() {
       <div className={clsx("mx-auto sticky min-w-max", {
         " w-[848px]": scrollPosition == 0 || activeModal
       })}>
-        <div className={clsx("flex relative items-center border border-[#dddddd] rounded-[32px] text-[#717171] text-[0.875rem] shadow-lg", {
-          "bg-[#ebebeb]": activeModal
+        <div className={clsx("flex relative items-center border border-[#dddddd] rounded-[32px] text-[#717171] text-[0.875rem] shadow-sm hover:shadow-md transition-shadow", {
+          "bg-[#ebebeb] hover:shadow-sm !shadow-sm": activeModal,
+          "!shadow-md": scrollPosition == 0,
         })}>
 
           {scrollPosition == 0 || activeModal ? (
-            <button onClick={() => setActiveModal('locationType')} className={clsx("text-start px-3 py-3 pl-7 w-[248px] rounded-full hover:bg-[#ebebeb]", {
-              "!bg-white shadow-lg": activeModal === 'locationType',
-              "hover:bg-[#DDDDDD]": activeModal,
+            <button onClick={() => setActiveModal('locationType')} className={clsx("text-start px-3 py-3 pl-7 w-[248px] rounded-full", {
+              "bg-white shadow-lg": activeModal === 'locationType',
+              "hover:bg-[#DDDDDD]": activeModal && activeModal !== 'locationType',
+              "hover:bg-[#ebebeb]" : !activeModal,
               "max-w-max": scrollPosition > 0,
             })}>
               <div className="text-[0.750rem] text-[#222222] font-semibold pb-0.5">Yer</div>
@@ -48,17 +50,19 @@ function HeaderFilterBar() {
 
           {scrollPosition == 0 || activeModal ? (
             <>
-              <button onClick={() => setActiveModal('startDateType')} className={clsx("text-start px-6 py-3 hover:bg-[#ebebeb] hover:border-none rounded-full", {
-                "!bg-white shadow-lg": activeModal === 'startDateType',
-                "hover:bg-[#DDDDDD]": activeModal
+              <button onClick={() => setActiveModal('startDateType')} className={clsx("text-start px-6 py-3 hover:border-none rounded-full", {
+                "bg-white shadow-lg": activeModal === 'startDateType',
+                "hover:bg-[#DDDDDD]": activeModal && activeModal !== 'startDateType',
+                "hover:bg-[#ebebeb]" : !activeModal,
               })}>
                 <div className="text-[0.750rem] text-[#222222] font-semibold pb-0.5">Giriş</div>
                 <div>Tarih ekleyin</div>
               </button>
 
-              <button onClick={() => setActiveModal('endDateType')} className={clsx("text-start px-6 py-3 hover:bg-[#ebebeb] hover:border-none rounded-full", {
-                "!bg-white shadow-lg": activeModal === 'endDateType',
-                "hover:bg-[#DDDDDD]": activeModal
+              <button onClick={() => setActiveModal('endDateType')} className={clsx("text-start px-6 py-3  hover:border-none rounded-full", {
+                "bg-white shadow-lg": activeModal === 'endDateType',
+                "hover:bg-[#DDDDDD]": activeModal && activeModal !== 'endDateType',
+                "hover:bg-[#ebebeb]" : !activeModal,
               })}>
                 <div className="text-[0.750rem] text-[#222222] font-semibold pb-0.5">Çıkış</div>
                 <div>Tarih ekleyin</div>
@@ -76,9 +80,10 @@ function HeaderFilterBar() {
 
 
           {scrollPosition == 0 || activeModal ? (
-            <button onClick={() => setActiveModal('peopleNumberFilter')} className={clsx("flex flex-col text-start flex-1 py-3  pl-6 pr-2 hover:bg-[#ebebeb] rounded-full justify-between", {
-              "!bg-white shadow-lg": activeModal === 'peopleNumberFilter',
-              "hover:bg-[#DDDDDD]": activeModal,
+            <button onClick={() => setActiveModal('peopleNumberFilter')} className={clsx("flex flex-col text-start flex-1 py-3  pl-6 pr-2 rounded-full justify-between", {
+              "bg-white shadow-lg": activeModal === 'peopleNumberFilter',
+              "hover:bg-[#DDDDDD]": activeModal && activeModal !== 'peopleNumberFilter',
+              "hover:bg-[#ebebeb]" : !activeModal,
             })}>
               <div className="text-[0.750rem] text-[#222222] font-semibold pb-0.5">Kişiler</div>
               <div>Misafir ekleyin</div>
@@ -94,7 +99,7 @@ function HeaderFilterBar() {
           <button className={clsx("rounded-full flex items-center absolute right-1 hover:bg-[#E00B41] justify-center p-4 h-12 bg-[#ff385c]", {
             "relative h-8 !px-2.5": scrollPosition > 0 && !activeModal
           })}>
-            <Icon name="search" size={scrollPosition > 0 ? 11 : 16} />
+            <Icon name="search" size={scrollPosition > 0 && !activeModal ? 11 : 16} />
             {activeModal && <span className="text-white font-semibold text-base pl-2 pr-1">Arama</span>}
           </button>
 
