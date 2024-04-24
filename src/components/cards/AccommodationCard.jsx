@@ -47,7 +47,8 @@ function AccommodationCard({ accommodation }) {
                         </>
                     )}
                 </div>
-                <div>
+                <div className='flex items-center space-x-1'>
+                    <Icon name='star' size={12} />
                     <p className='leading-5 text-[#222222]'>{accommodation.rating}</p>
                 </div>
             </div>

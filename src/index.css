@@ -47,6 +47,15 @@ body {
 }
 
 
+.category-slider {
+    padding:0 -24px;
+}
+
+.swiper-button-disabled  {
+    display: none;
+
+}
+
 .swiper-button-next {
     background-color: #ffffff;
     background-image: url('https://www.svgrepo.com/show/70596/left-arrow.svg');

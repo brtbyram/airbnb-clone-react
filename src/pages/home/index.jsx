@@ -11,16 +11,14 @@ function Home() {
   const isDesktop = useMediaQuery({ query: '(min-width: 1130px)' })
   const isBigScreen = useMediaQuery({ query: '(min-width: 1640px)' })
 
-
-
   return (
     <div>
-      <div className={clsx("grid gap-x-6 gap-y-10", {
+      <div className={clsx("grid gap-x-6 gap-y-10 px-20", {
         "grid-cols-1": isMobile,
         "grid-cols-2": isTablet,
         "grid-cols-3": isLaptop,
         "grid-cols-4": isDesktop,
-        "grid-cols-6": isBigScreen
+        "grid-cols-6": isBigScreen,
       })}>
         {accommodations.map((accommodation, index) => (
           <AccommodationCard key={index} accommodation={accommodation} />
