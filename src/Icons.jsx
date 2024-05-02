@@ -141,6 +141,21 @@ const CheckIcon = ({ size }) => {
   )
 }
 
+const PlusMınusIcon = ({ size }) => {
+
+  const style = {
+    display: 'block',
+    stroke: 'currentcolor',
+    strokeWidth: '3',
+    overflow: 'visible',
+    fill: 'none',
+  }
+
+  return (
+    <svg width={size} height={size} xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" aria-hidden="true" role="presentation" focusable="false" style={style}><path fill="none" d="M16 4v16m-8-8h16M8 26h16"></path></svg>
+  )
+}
+
 const Icon = ({ name, size = 24 }) => {
   const icons = {
     search: SearchIcon,
@@ -156,6 +171,7 @@ const Icon = ({ name, size = 24 }) => {
     facebook: FacebookIcon,
     twitter: TwitterIcon,
     instagram: InstagramIcon,
+    plusMınus: PlusMınusIcon
   };
 
   const Component = icons[name];
@@ -220,3 +236,7 @@ TwitterIcon.propTypes = {
 InstagramIcon.propTypes = {
   size: PropTypes.number,
 };  
+
+PlusMınusIcon.propTypes = {
+  size: PropTypes.number,
+};

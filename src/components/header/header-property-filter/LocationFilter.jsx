@@ -1,6 +1,6 @@
 
 
-function LocationFilter() {
+function LocationFilter({ filters, setFilters}) {
 
     const regions = [
         {
@@ -37,12 +37,12 @@ function LocationFilter() {
 
 
     return (
-        <div className='absolute z-10 top-20 left-0 p-10 bg-white border rounded-3xl shadow-xl'>
-            <h2 className="py-2 mb-5 ml-1 font-bold text-[0.875rem]">Bölgeye göre arayın</h2>
-            <div className="grid grid-cols-3 gap-2">
+        <div className='absolute z-10 top-20 left-0 p-6 pt-8 bg-white border rounded-3xl shadow-xl'>
+            <h2 className="mb-4 ml-2 font-bold text-[0.875rem]">Bölgeye göre arayın</h2>
+            <div className="grid grid-cols-3 gap-y-2">
                 {regions.map((region, index) => (
-                    <button key={index} className='flex flex-col mb-5 text-sm p-1 leading-[1.125rem]'>
-                        <img src={region.image} alt={region.name} className='w-[122px] h-[122px] rounded-lg border hover:border-spacing-3 hover:border-black' />
+                    <button key={index} onClick={() => setFilters({...filters, location: region.name})} className='flex flex-col text-sm p-2 leading-[1.125rem] hover:bg-[#ebebeb] rounded-lg'>
+                        <img src={region.image} alt={region.name} className='w-[108px] h-[108px] rounded-lg border' />
                         <h3 className="mt-2 mx-0.5">{region.name}</h3>
                     </button>
                 ))}
